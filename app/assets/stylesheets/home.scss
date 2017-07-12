@@ -1,0 +1,116 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background-image: url(bg.jpg);
+}
+h3{
+  color: #2F5C73;
+}
+
+table{
+    background-color: #005C73;
+}
+tr:hover td{
+  background-color: #2B7682;
+}
+
+.navbar-nav > li > a {
+    color: #fff !important;
+}
+.container{
+    border-radius:14px;
+    border: 3px solid #3D9DA4;
+    height: 550px;
+    margin-left: 8%;
+    margin-top: 0.4%;
+    margin-bottom: 5.4%;
+    background-color: #BFF1EC;
+}
+.navbar-brand {
+    margin-left: 106px !important;
+}
+.footer{
+  background-color: #A0CDF7;
+  height: 50px;
+}
+
+.container-right{
+    border-radius: 15px;
+    border: 3px solid #005C73;
+    height: 83%;
+    background-color: #005C73;
+    margin-top: 5%;
+}
+
+.container-title{
+    margin-top: 0.6%;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #fff;
+/*    padding: 10px 49px 10px 49px;*/
+    background-color: #EC5C51 !important;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 11px 27px;
+}
+#list-rooms>li{
+  width: 133px;
+  background-color: #B7E1DC;
+}
+.select{
+  margin-top: 15px;
+}
+.list-class{
+  height: 500px;
+    width: 819px;
+    margin: auto;
+}
+.class {
+    width: 50%;
+    height: 134px;
+    border-radius: 15px;
+    background-color: #EC5C51;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+.col-sm-4 {
+    height: 290px;
+    border-radius: 15px;
+    background-color: #EC5C51;
+    margin-top: 10px;
+}
+.col-sm-12 {
+    text-align: center;
+    color: white;
+}
+
+.score-rank{
+    height: 100%;
+    background-color: #005C73;
+    width: 250px;
+    float: right;
+}
+.dropdown-menu>li:hover a {
+    background-color: #A03D3D;
+    border-radius: 12px;
+}
+.dropdown-menu>li {
+    border-bottom: 1px dotted #E6B9B6;
+}
+
+
+.egg {
+    margin-left: 15px;
+    margin-top: 42px;
+    float:left;
+   display:block;
+   width: 126px;
+   height: 180px;
+  background-image: url(da.jpg);
+   -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+   border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+}

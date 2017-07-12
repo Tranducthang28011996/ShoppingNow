@@ -1,0 +1,50 @@
+<div class="register">
+  <div class="col-md-5 col-md-offset-4" style="margin-top:50px">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
+
+    <%= f.label :email, "Email" %> 
+    <div class="input-group">
+      <%= f.email_field :email, class: 'form-control', placeholder: 'Email', autofocus: true %>
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-user"></span>
+      </span>
+    </div>
+
+    <%= f.label :password, "Password" %> 
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %><br />
+    <div class="input-group">
+      <%= f.password_field :password, class: 'form-control', placeholder: 'Password', autocomplete: 'off'%>
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-lock"></span>
+      </span>
+
+    </div>
+
+    <%= f.label :password_confirmation, "Password confirmation" %> 
+    <div class="input-group">
+      <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password confirmation', autocomplete: 'off'%>
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-lock"></span>
+      </span>
+    </div>
+
+    <%= f.label :password_confirmation, "Current Password" %> 
+    <div class="input-group">
+      <%= f.password_field :current_password, class: 'form-control', placeholder: 'Current password', autocomplete: 'off'%>
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-lock"></span>
+      </span>
+    </div>
+
+    <div class="actions checkbox col-md-offset-4">
+      <%= f.submit "Xác nhận", class: 'btn btn-danger' %>
+    </div>
+  <% end %>
+<%= button_to "Xóa Tài khoản", registration_path(resource_name), class: 'btn btn-danger', data: { confirm: "Bạn chắc chắn chứ?" }, method: :delete %>
+
+<%= link_to "Về Trang chủ", :back %>
+</div>
+</div>
