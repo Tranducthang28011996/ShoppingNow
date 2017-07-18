@@ -1,0 +1,59 @@
+ <script>
+    $(document).ready(function(){
+      $("#show").click(function(){
+          $("#sel1").hide();
+          $("#ct").show();
+      });
+      $("#hide").click(function(){
+          $("#sel1").show();
+          $("#ct").hide();
+      });
+  });
+ </script>
+ <div class="col-md-4">
+  <div class="col-md-10 col-md-offset-1" style="margin-top:22%; margin-bottom:22%"><img id="previewImage" style="width: 235px; height: 350px; border: 1px solid gray">
+  </div>
+</div>
+<div class="col-md-8">
+  <div class="col-md-12"><h2>Inforamtion Product:</h2></div>
+  <div class="col-md-12" id="form_pr">
+    <%= form_for [:admin, @category] do |f| %>
+      <div class="form-group">
+        <label for="usr">Name:</label>
+        <%= f.text_field :name, class: 'form-control'%>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Price:</label>
+        <%= f.text_field :price, class: 'form-control'%>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Discout:</label>
+        <%= f.text_field :discount, class: 'form-control'%>
+      </div>
+       <div class="form-group">
+        <label for="pwd">Trademark:</label>
+        <%= f.text_field :trademark, class: 'form-control'%>
+      </div>
+        <%= link_to "New Category","#",id: 'show', class: 'btn btn-danger', :remote =>true %>
+        <%= link_to "Categories Exists","#", id: 'hide', class: 'btn btn-danger', :remote =>true %> 
+        <div class="form-group" id="sel1" style="display: none;">
+        <label for="pwd">Category:</label>
+        <%= f.select :category_id, options_for_select(Category.all.map{|s|[s.name_ct, s.id]}), {}, class: "form-control" %>
+        </div>
+        <div class="form-group">
+        <label for="pwd">Category:</label>
+        <%= f.text_field :name_ct, class: 'form-control', id: 'ct'%>
+        <!-- <input type="text" class="form-control"> -->
+      </div> 
+      <div class="form-group">
+        <label for="pwd">Image:</label>
+        <%= f.file_field :image, onchange: 'loadImageFile(event)', class: 'form-control' %>
+      </div>
+      <div class="form-group"3
+        <label for="comment">Comment:</label>
+        <%= f.text_area :description, class: 'form-control'%>
+      </div>
+    <%= f.submit %>
+    <% end %>
+  </div>
+</div>

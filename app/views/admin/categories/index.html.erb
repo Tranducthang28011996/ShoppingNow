@@ -1,0 +1,38 @@
+<body class="admin">
+  <div class="col-md-12" style="background-color: green">1</div>
+  <div class="col-md-12">
+
+    <div class="col-md-3">
+    <div class="col-md-12" id='DashBoard'><h2>DashBoard</h2></div>
+      <div class="li_cate_ad col-md-12">
+        <ul>
+          <li><a href="">QUAN LY HANG</a></li>
+          <li><a href="">QUAN LY BOG</a></li>
+          <li><a href="">QUAN LY KHACH HANG</a></li>
+          <li><a href="">QUAN LY COMMENT</a></li>
+          <li><a href="">THONG KE</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-9" style="background-color: #fff;margin-left:-2%"><span class="glyphicon" style="color:#53B6F3">&#xe258;<a href="">Quan Ly Hang</a></span>
+    <hr class="hr_ad">
+    <!-- Tab control -->
+    <div class="col-md-12" style="margin-left: -2%;">
+      <ul class="nav nav-tabs">
+      <% @categories.each do |ct|%>
+        <li><a data-toggle="tab" href="#home<%= ct.id %>"><%= link_to ct.name_ct, admin_category_path(ct), remote: true %></a></li>
+      <% end %>
+      <li class="pull-right">
+         <%= link_to '+', new_admin_category_path, remote: true, turbolinks: false , class: "btn btn-default"%>
+
+      </li>
+      </ul>
+      <div class="tab-content">
+        <div id="list-product"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+<button type="button" class="btn btn-success btn-circle"><i class="glyphicon glyphicon-link"></i></button>
+</body>

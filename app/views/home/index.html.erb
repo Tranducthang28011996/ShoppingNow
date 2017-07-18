@@ -1,0 +1,50 @@
+ <div class="col-md-10 col-md-offset-1" style="background-color: #fff;">
+  <%= render 'share/side_bar' %>
+  <div class="col-md-8">
+    <div class="col-md-12">
+      <div class="col-xs-5" style="background-color: #fff;">
+       <%= image_tag 'product1.png', :size => "191x320" %>
+      </div>
+      <div class="col-xs-7">
+        <div class="col-md-12">
+          <h2>IPHONE 4.</h2>
+        </div>
+        <div class="col-md-12">
+          <p>What is Lorem Ipsum?
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+        </div>
+        <div class="col-md-12">
+          <button class="btn btn-primary pull-right">Show Now</button>
+        </div>
+      </div>
+    </div>
+     <div class="col-md-12" >
+      <br>
+      <hr class="style15">
+      <br>
+    </div>
+    <div class="col-xs-12"> FEATURED PRODUCTS
+    <hr>
+    <div class="notice"><%= render 'share/alert', :flash => flash %></div>
+    <hr>
+    <% @products.each do |product| %>
+      <div class="list_product col-xs-4">
+        <div class="col-xs-12">
+          <%= image_tag product.image.thumb.url, :size => "100x200" %>
+        </div>
+        <div class="title_product col-xs-12">
+          <a href=""><b><%= product.name %></b></a>
+        </div>
+        <div class="col-xs-12">
+          <p class="description"><%= product.description %></p>
+        </div>
+        
+        <div class="col-xs-12">
+            <span style="color: #23556C; font-weight: bold;"><%= product.price %></span>
+            <%= link_to 'Add to cart', order_item_index_path(quantity: 1, product_id: product.id), method: :post, remote: true,class: 'btn btn-default pull-right' %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+ </div>

@@ -3,5 +3,7 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+   #movies = Product.create([{ name: 'Star Wars', category_id: '124 '}])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Product.create([{name: 'binh'}, {name: 'thang'}])

@@ -2,115 +2,171 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
-  background-image: url(bg.jpg);
-}
-h3{
-  color: #2F5C73;
-}
-
-table{
-    background-color: #005C73;
-}
-tr:hover td{
-  background-color: #2B7682;
+  background-color:#EFEEEA;
 }
 
 .navbar-nav > li > a {
     color: #fff !important;
 }
-.container{
-    border-radius:14px;
-    border: 3px solid #3D9DA4;
-    height: 550px;
-    margin-left: 8%;
-    margin-top: 0.4%;
-    margin-bottom: 5.4%;
-    background-color: #BFF1EC;
-}
-.navbar-brand {
-    margin-left: 106px !important;
-}
-.footer{
-  background-color: #A0CDF7;
-  height: 50px;
-}
-
-.container-right{
-    border-radius: 15px;
-    border: 3px solid #005C73;
-    height: 83%;
-    background-color: #005C73;
-    margin-top: 5%;
-}
-
-.container-title{
-    margin-top: 0.6%;
-}
-.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-    color: #fff;
-/*    padding: 10px 49px 10px 49px;*/
-    background-color: #EC5C51 !important;
+li{
+    list-style: none;
 }
 .nav>li>a {
     position: relative;
     display: block;
     padding: 11px 27px;
 }
-#list-rooms>li{
-  width: 133px;
-  background-color: #B7E1DC;
-}
-.select{
-  margin-top: 15px;
-}
-.list-class{
-  height: 500px;
-    width: 819px;
-    margin: auto;
-}
-.class {
-    width: 50%;
-    height: 134px;
-    border-radius: 15px;
-    background-color: #EC5C51;
-    margin-top: 10px;
-    margin-left: 0px;
-}
 
-.col-sm-4 {
-    height: 290px;
-    border-radius: 15px;
-    background-color: #EC5C51;
-    margin-top: 10px;
-}
-.col-sm-12 {
-    text-align: center;
-    color: white;
-}
-
-.score-rank{
-    height: 100%;
-    background-color: #005C73;
-    width: 250px;
-    float: right;
-}
 .dropdown-menu>li:hover a {
-    background-color: #A03D3D;
+    background-color: #23556C;
     border-radius: 12px;
 }
 .dropdown-menu>li {
-    border-bottom: 1px dotted #E6B9B6;
+    border-bottom: 1px dotted #23556C;
 }
 
-
-.egg {
-    margin-left: 15px;
-    margin-top: 42px;
-    float:left;
-   display:block;
-   width: 126px;
-   height: 180px;
-  background-image: url(da.jpg);
-   -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
-   border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+/********Search************/
+#imaginary_container{
+     margin-top:5%;
+     margin-bottom:5%;
 }
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+  border-right:0; 
+  box-shadow:0 0 0; 
+  border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+/**************Li Product*****************/
+.li{
+  padding: 5% 0% 5% 5%;
+  background-color: #23556C;
+  font-weight: bold;
+}
+.li_pr{
+  margin-left: -8%;
+  background-color: #fff;
+  border-bottom: 1px dotted black;
+  padding: 3% 0% 3% 18%;
+  width: 116%;
+}
+.li_pr{
+  font-size: 96%;
+}
+.li_pr a:hover{
+  font-weight: bold;
+}
+/************Cart******************/
+.li_pr2{
+  margin-left:14%;
+  color:#fff;
+  font-size: 90%;
+  
+}
+.li_pr2 a{
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.li_pr2 span{
+  color:#9EE9F5;
+}
+
+.li_pr3 {
+  margin-left:14%;
+  color:#fff;
+  font-size: 90%;
+  background-color:red;
+  width: 72%;
+}
+
+.li_pr3 span{
+  margin-left:10% !important;
+}
+.li_button{
+  background-color:grey;
+}
+/*Product*/
+// p{
+//   width: 100%;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   height: 247px;
+// }
+.description{
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height:5%;
+}
+hr.style15 {
+  margin-top: -1%;
+  border-top: 3px double #8c8b8b;
+  margin-bottom: -1%;
+}
+
+.title_product a{
+  color:#23556C;
+  text-decoration: none;
+}
+.title_product a:hover{
+  color:black;
+  font-weight:bold;
+}
+
+.list_product{
+  margin-bottom: 3%;
+}
+.col-md-12 h2{
+  color:#23556C;
+}
+.col-md-12 p{
+  color:#D1CEC9;
+}
+
+.btn{
+  border-radius:0px ;
+}
+
+/*************footer**************/
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }

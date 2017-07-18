@@ -9,7 +9,8 @@
   </head>
 
   <body>
-  <%= render 'share/header' %>
+  <%= render 'share/header' unless @skip_layout %>
     <%= yield %>
+  <%= render 'share/footer' unless @skip_layout%> 
   </body>
 </html>

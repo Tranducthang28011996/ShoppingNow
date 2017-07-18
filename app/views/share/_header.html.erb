@@ -1,8 +1,8 @@
-<nav class="navbar navbar-default" style="background-color: #EC5C51;">
+<nav class="navbar navbar-default" style="background-color: #23556C;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <div style="margin-left: 171px">
+      <div style="margin-left: 121px">
         <%= link_to root_path do %>
           <%= image_tag 'logo.png', :size => "50x50" %>
         <% end %>
@@ -10,25 +10,26 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ><a href="#" style="color: #fff">LỚP HỌC<span class="sr-only">(current)</span></a></li>
-        <li><%= link_to  'KIỂM TRA'%></li>
-        <li><%= link_to  'THI ĐẤU' %></li>
-        <li><%= link_to 'HỌC MÀ CHƠI' %></li>
-        <li><a href="#">GIỚI THIỆU</a></li>
+        <li ><a href="#" style="color: #fff">HOME<span class="sr-only">(current)</span></a></li>
+        <li><%= link_to  'GIỚI THIỆU'%></li>
+        <li><%= link_to  'TIN TỨC' %></li>
+        <li><%= link_to ' HƯỚNG DẪN BÁN HÀNG' %></li>
+        <li><a href="#">LIÊN HỆ</a></li>
+        <li><a href="#" class="glyphicon glyphicon-shopping-cart">  <span class="cart-text"><%= render 'share/cart_text' %></span></a></li> 
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? == false %>
         <li>
         <%= link_to new_user_session_path do %>
-          <i class="glyphicon glyphicon-user"></i> &nbsp;Đăng nhập
+          <i class="glyphicon glyphicon-user"></i> &nbsp;ĐĂNG NHẬP
         <% end %>
         </li>
         <% else %>
           <li class="dropdown" >
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style='background-color: #EC5C51'><i class="glyphicon glyphicon-user"></i> &nbsp;<%= current_user.email %>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style='background-color: #23556C'><i class="glyphicon glyphicon-user"></i> &nbsp;<%= current_user.email %>
             <span class="caret"></span></a>
-            <ul class="dropdown-menu" style='background-color: #EC5C51;border-radius: 15px'>
+            <ul class="dropdown-menu" style='background-color: #23556C;border-radius: 15px'>
               <li><%= link_to 'Chỉnh sửa thông tin cá nhân',edit_user_registration_path %></li>
               <li><%= link_to 'Thoát',  destroy_user_session_path, method: :delete %></li>
             </ul>
@@ -38,3 +39,4 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+

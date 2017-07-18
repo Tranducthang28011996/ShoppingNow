@@ -1,0 +1,45 @@
+.admin{
+  background-color: #F2F1EE;
+}
+.li_cate_ad ul li {
+  background-color:#fff;
+  margin-left: -25%;
+  border-top: 1px solid#B2B2B2;
+  padding: 5% 5% 5% 5%;
+}
+.li_cate_ad ul li:hover {
+  background-color:#F2F1EE;
+}
+.li_cate_ad ul li a{
+  text-decoration: none !important;
+  font-weight: bold;
+  color:#428BCA;
+}
+.col-md-9 span{
+  background-color: #fff;
+  padding: 4% 0% 1% 0%;
+ margin-left:-1%;
+margin-top: -0.1%;
+}
+
+.hr_ad{
+   margin-top: 0.1%;
+  margin-bottom: 0.1%;
+}
+.nav > li > a {
+  padding: 2px 27px !important;
+}
+img.img-fluid{
+  height: 50px;
+  
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}

@@ -1,0 +1,43 @@
+<div id="home" class="tab-pane fade in active">
+  <div class="table-responsive">
+      <table class="table product-table">
+        <thead>
+          <tr>
+              <th></th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Discout</th>
+              <th>Trademark</th>
+              <th>Description</th>
+              <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @products.each do |pr| %>
+          <tr>
+              <th scope="row">
+                  <%= image_tag pr.image.thumb.url%>
+              </th>
+              <td>
+                  <h5><strong><%= pr.name %></strong></h5>
+              </td>
+              <td><%= pr.price %></td>
+              <td><%= pr.discount %> %</td>
+              <td>
+                 <%= pr.trademark %>
+              </td>
+              <td><p style="color: black"><%= pr.description %></p></td>
+              <td>
+                  <%= link_to "X", admin_category_path(pr), method: :delete, remote: true, class: 'btn btn-sm btn-primary', id: 'destroy_pr'%>
+                  <%= link_to "edit", edit_admin_product_path(pr), remote: true, class: 'btn btn-sm btn-primary'%>
+                  <%= link_to "show", admin_product_path(pr.id), class: 'btn btn-sm btn-primary'%>
+              </td>
+          </tr>
+        <% end %>
+        <tr>
+            <td>PHAN TRANG</td>
+          </tr>
+        </tbody>
+        </table>
+  </div>
+</div>

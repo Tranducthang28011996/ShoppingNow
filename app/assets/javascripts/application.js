@@ -14,4 +14,27 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require ckeditor/init
 //= require_tree .
+/*effect cart*/
+$(document).ready(function(){
+    $("#1").click(function(){
+        $("#123").slideToggle("slow");
+    });
+});
+/*show hide input whenr create product*/
+ // $(document).ready(function(){
+ //      $("#show").click(function(){
+ //          $("#sel1").hide();
+ //          $("#ct").show();
+ //      });
+ //      $("#hide").click(function(){
+ //          $("#sel1").show();
+ //          $("#ct").hide();
+ //      });
+ //  });
+/**Privew image when select file**/
+
+  var loadImageFile = function(event) {
+    var previewImage = document.getElementById('previewImage'); 
+    previewImage.src = URL.createObjectURL(event.target.files[0]);};

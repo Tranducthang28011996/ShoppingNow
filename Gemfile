@@ -56,3 +56,9 @@ gem 'devise'
 gem "twitter-bootstrap-rails"
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem "font-awesome-rails"
+gem 'carrierwave'
+gem 'cloudinary'
+gem "mini_magick"
+gem 'ckeditor'
+gem 'will_paginate', '~> 3.1.0'
