@@ -36,14 +36,14 @@
       </div>
         <%= link_to "New Category","#",id: 'show', class: 'btn btn-danger', :remote =>true %>
         <%= link_to "Categories Exists","#", id: 'hide', class: 'btn btn-danger', :remote =>true %> 
-        <div class="form-group" id="sel1" style="display: none;">
+      <div class="form-group" id="sel1" style="display: none;">
         <label for="pwd">Category:</label>
         <%= f.select :category_id, options_for_select(Category.all.map{|s|[s.name_ct, s.id]}), {}, class: "form-control" %>
-        </div>
-        <div class="form-group">
+      </div>
+      <div class="form-group">
         <label for="pwd">Category:</label>
-        <%= f.text_field :name_ct, class: 'form-control', id: 'ct'%>
-        <!-- <input type="text" class="form-control"> -->
+        <%#= f.text_field :name_ct, class: 'form-control', id: 'ct'%>
+        <%= f.text_field :name_ct %>
       </div> 
       <div class="form-group">
         <label for="pwd">Image:</label>

@@ -12,10 +12,12 @@ class OrderItemController < ApplicationController
   end
 
   def update
-    @order = current_order
-    @order_item = @order.order_items.find(params[:id])
-    @order_item.update_attributes(order_item_params)
-    @order_items = @order.order_items
+    order_item_ids = params.keys.select{|key| key.include?('quantity')}
+    order_items = current_order.order_items
+    order_items.each_with_index do |value, index|
+    value.update_attributes(quantity: params[order_item_ids[index]].to_i)
+    end
+    redirect_to :back
   end
 
   def destroy

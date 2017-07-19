@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def subtotal
-    current_order.order_items.map{|k| k.product.price}.sum
+    current_order.order_items.map{|k| k.product.price*k.quantity}.sum
   end
 
   def current_order

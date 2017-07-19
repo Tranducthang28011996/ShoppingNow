@@ -1,5 +1,5 @@
 class OrderController < ApplicationController
   def show
-    @orders = current_order.order_items
+    @order_items = current_order.order_items
   end
 end

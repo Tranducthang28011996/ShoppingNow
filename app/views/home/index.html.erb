@@ -23,14 +23,17 @@
       <hr class="style15">
       <br>
     </div>
+    <div class="col-xs-12">
+      <hr>
+      <div class="notice"><%= render 'share/alert', :flash => flash %></div>
+      <hr>
+    </div>
     <div class="col-xs-12"> FEATURED PRODUCTS
-    <hr>
-    <div class="notice"><%= render 'share/alert', :flash => flash %></div>
-    <hr>
     <% @products.each do |product| %>
+    <%= link_to product_path(product) do %>
       <div class="list_product col-xs-4">
         <div class="col-xs-12">
-          <%= image_tag product.image.thumb.url, :size => "100x200" %>
+          <%= image_tag product.image.image_index.url%>
         </div>
         <div class="title_product col-xs-12">
           <a href=""><b><%= product.name %></b></a>
@@ -40,11 +43,12 @@
         </div>
         
         <div class="col-xs-12">
-            <span style="color: #23556C; font-weight: bold;"><%= product.price %></span>
+            <span style="color: #23556C; font-weight: bold;"><%= number_to_currency product.price %></span>
             <%= link_to 'Add to cart', order_item_index_path(quantity: 1, product_id: product.id), method: :post, remote: true,class: 'btn btn-default pull-right' %>
         </div>
       </div>
       <% end %>
+      <% end %>
     </div>
   </div>
- </div>
+</div>

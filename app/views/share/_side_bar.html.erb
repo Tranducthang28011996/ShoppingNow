@@ -15,7 +15,6 @@
               </div>
         </div>
     </div>
-
     <div class="col-md-12" > 
       <div class="li col-md-12">
         CATEGORIES
@@ -42,7 +41,6 @@
         <li class="li_pr"><a href="">Sony Ericsson</a></li>
         <li class="li_pr"><a href="">Nokia</a></li>
         <li class="li_pr"><a href="">LG</a></li>
-
       </div>
     </div>
     <div class="li col-md-12" >CART<button id="1" class="glyphicon glyphicon-chevron-down"></button> 
@@ -51,7 +49,15 @@
       <%= render 'share/cart' %>
       </li>
       </div>
-      <li style="margin-left: 32px"><button>Show Cart <span class="show_btn_cart"><%= render 'share/btn_show_cart' %></span></button></li>
+      <li style="margin-left: 32px">
+      <% if session[:order_id] %>
+       <%= link_to order_path(current_order.id), class: ' btn btn-default' do %>
+        Show Cart<span class="show_btn_cart"><%= render 'share/btn_show_cart' %></span>
+       <% end %>
+       <% else %>
+       <button>Show Cart<span class="show_btn_cart"><%= render 'share/btn_show_cart' %></span></button>
+      <% end %>
+      </li>
     </div>
     <div class="li col-md-12"> TAGS </div>
   </div>
