@@ -1,0 +1,22 @@
+vi:
+  layout:
+    header: 
+      home: 'Trang Chủ'
+      intro: 'Giới Thiệu'
+      news: 'Tin Tức'
+      guide: 'Hướg Dẫn Mua Hàng'
+      contact: 'Liên Hệ'
+      login: 'Đăng Nhập'
+      item: 'Sản phẩm'
+    sidebar:
+      categories: 'PHÂN LOẠI'
+      manufacturers: 'NHÀ SẢN XUẤT'
+      cart: 'Giỏ Hàng'
+      btn_cart: 'Xem giỏ hàng.'
+  order:
+    show: 'Home>Your shopping cart'
+  home:
+    featured_product: 'SẢN PHẨM MỚI'
+    view_product: 'Danh Sách sản phẩm'
+    btn_show: 'Xem ngay!'
+    add_cart: 'Mua hàng.'

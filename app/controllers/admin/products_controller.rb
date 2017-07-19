@@ -1,7 +1,6 @@
 class Admin::ProductsController < ApplicationController
   before_action :skiplayout
    def edit
-    byebug
       @product = Product.find_by_id params[:id]
     end
     def update

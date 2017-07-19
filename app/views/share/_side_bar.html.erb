@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-12" > 
       <div class="li col-md-12">
-        CATEGORIES
+        <%= t 'layout.sidebar.categories' %>
       </div>
       <div class="col-md-12">
         <li class="li_pr"><a href="">Business Phones</a></li>
@@ -28,22 +28,15 @@
     </div>
     <div class="col-md-12" > 
       <div class="li col-md-12">
-        MANUFACTURERS
+       <%= t 'layout.sidebar.manufacturers' %>
       </div>
       <div class="col-md-12">
-        <li class="li_pr"><a href="">Apple</a></li>
-        <li class="li_pr"><a href="">Asus</a></li>
-        <li class="li_pr"><a href="">Gigabyte</a></li>
-        <li class="li_pr"><a href="">HTC</a></li>
-        <li class="li_pr"><a href="">HP</a></li>
-        <li class="li_pr"><a href="">Motorola</a></li>
-        <li class="li_pr"><a href="">Samsung</a></li>
-        <li class="li_pr"><a href="">Sony Ericsson</a></li>
-        <li class="li_pr"><a href="">Nokia</a></li>
-        <li class="li_pr"><a href="">LG</a></li>
+          <%Order.show.each do |t| %>
+            <li class="li_pr"><%= link_to t.name_ct, product_index_path(id: t.id) %></li>
+          <% end %>
       </div>
     </div>
-    <div class="li col-md-12" >CART<button id="1" class="glyphicon glyphicon-chevron-down"></button> 
+    <div class="li col-md-12" ><%= t 'layout.sidebar.cart' %><button id="1" class="glyphicon glyphicon-chevron-down"></button> 
       <div id="123">
       <li class="li_pr2">
       <%= render 'share/cart' %>
@@ -55,7 +48,7 @@
         Show Cart<span class="show_btn_cart"><%= render 'share/btn_show_cart' %></span>
        <% end %>
        <% else %>
-       <button>Show Cart<span class="show_btn_cart"><%= render 'share/btn_show_cart' %></span></button>
+       <button><%= t 'layout.sidebar.btn_cart' %><span class="show_btn_cart"><%= render 'share/btn_show_cart' %></span></button>
       <% end %>
       </li>
     </div>

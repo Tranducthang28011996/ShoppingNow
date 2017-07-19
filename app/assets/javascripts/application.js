@@ -38,3 +38,27 @@ $(document).ready(function(){
   var loadImageFile = function(event) {
     var previewImage = document.getElementById('previewImage'); 
     previewImage.src = URL.createObjectURL(event.target.files[0]);};
+/*************indenity quantity****************/
+function cong(order_item_id) {
+    console.log(order_item_id);
+    var quantity_order_item = "quantity-" + order_item_id;
+    var amount_order_item = "amount-" + order_item_id;
+    var quantity = document.getElementById(quantity_order_item).value;
+    var price_product = "price-" + order_item_id;
+    var price = document.getElementById(price_product).innerHTML;
+    document.getElementById(quantity_order_item).value = parseInt(quantity)+ 1;
+    document.getElementById(amount_order_item).innerHTML = parseInt(quantity) * parseFloat(price) + parseFloat(price)+ '$';
+  }
+  function tru(order_item_id) {
+    console.log(order_item_id);
+    var quantity_order_item = "quantity-" + order_item_id;
+    var amount_order_item = "amount-" + order_item_id;
+    var quantity = document.getElementById(quantity_order_item).value;
+    var price_product = "price-" + order_item_id;
+    var price = document.getElementById(price_product).innerHTML;
+    if(quantity > 1){
+     document.getElementById(quantity_order_item).value = parseInt(quantity)- 1;
+     document.getElementById(amount_order_item).innerHTML = parseInt(quantity - 2) * parseFloat(price) + parseFloat(price)+ '$';
+    }
+
+  }

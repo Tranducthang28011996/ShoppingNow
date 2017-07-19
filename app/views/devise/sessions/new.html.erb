@@ -1,16 +1,14 @@
-
-
 <div class="register">
   <div class="col-md-5 col-md-offset-4" style="margin-top:50px">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <%= f.label :Email, "Email" %> 
+  <%= f.label :Email, "Email" %>
   <div class="input-group">
     <%= f.email_field :email, class: 'form-control', placeholder: 'Email', autofocus: true %>
     <span class="input-group-addon">
       <span class="glyphicon glyphicon-user"></span>
     </span>
   </div>
-  <%= f.label :Password, "Password" %> 
+  <%= f.label :password, "Password" %>
   <div class="input-group">
     <%= f.password_field :password, class: 'form-control', placeholder: 'Password', autocomplete: 'off'%>
     <span class="input-group-addon">
@@ -21,12 +19,12 @@
   <% if devise_mapping.rememberable? -%>
     <div class="checkbox col-md-offset-1">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me, 'Tự động đăng nhập lần sau' %>
+       <%= f.label :rememberpassword, "Remember password?" %>
     </div>
   <% end -%>
 
   <div class="actions checkbox col-md-offset-4">
-    <%= f.submit "Đăng Nhập", class: 'btn btn-default' %>
+    <%= f.submit 'Login', class: 'btn btn-primary' %>
   </div>
 <% end %>
 <%= render "devise/shared/links" %>

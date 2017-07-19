@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  scope "(:locale)", locale: /en|vi/ do
   root 'home#index'
   resources :product, only: [:index, :show]
   resources :order, only: [:show]
   # resources :order_item, only: [:create, :update, :destroy]
   resources :order_item
+  end
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks"}
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :admin do 
     resources :categories
     resources :products, only: [:edit, :update, :show]

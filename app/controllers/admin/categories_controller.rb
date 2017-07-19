@@ -13,8 +13,7 @@ class Admin::CategoriesController < ApplicationController
     @products = category.products
   end
   def create
-    byebug
-    if params[:name_ct] == nil
+    if params[:name_ct].nil? == false
       @category = Product.new(product_pamrams)
       if @category.save
        redirect_to admin_root_url
@@ -22,7 +21,6 @@ class Admin::CategoriesController < ApplicationController
         render :new
       end
     else
-      byebug
       @category = Category.new(category_params).products.new(product_pamrams)
       if @category.save
        redirect_to admin_root_url
