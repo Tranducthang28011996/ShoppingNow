@@ -67,5 +67,3 @@ gem 'cloudinary'
 gem "mini_magick"
 gem 'ckeditor'
 gem 'will_paginate', '~> 3.1.0'
-# gem 'kaminari'
-# gem 'bootstrap-kaminari-views'
