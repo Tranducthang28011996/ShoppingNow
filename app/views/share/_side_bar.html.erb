@@ -32,7 +32,7 @@
       </div>
       <div class="col-md-12">
           <%Order.show.each do |t| %>
-            <li class="li_pr"><%= link_to t.name_ct, product_index_path(id: t.id) %></li>
+            <li class="li_pr"><%= link_to t.name_ct,category_path(t) %></li>
           <% end %>
       </div>
     </div>

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :product, only: [:index, :show]
   resources :order, only: [:show, :destroy]
+  resources :category
   # resources :order_item, only: [:create, :update, :destroy]
   resources :order_item
   end
