@@ -20,3 +20,8 @@ vi:
     view_product: 'Danh Sách sản phẩm'
     btn_show: 'Xem ngay!'
     add_cart: 'Mua hàng.'
+
+  devise:
+    sessions:
+      user:
+        signed_in: 'Đăng nhập thành công.'

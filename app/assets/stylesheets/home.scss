@@ -1,6 +1,10 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  margin: 0px;
+  padding: 0px;
+}
 body{
   background-color:#EFEEEA;
 }
@@ -16,7 +20,10 @@ li{
     display: block;
     padding: 11px 27px;
 }
-
+.navbar-right {
+    float: right !important;
+    margin-right: -4%;
+}
 .dropdown-menu>li:hover a {
     background-color: #23556C;
     border-radius: 12px;
