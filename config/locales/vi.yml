@@ -1,7 +1,7 @@
 vi:
   layout:
     header: 
-      home: 'Trang Chủ'
+      home: 'Home'
       intro: 'Giới Thiệu'
       news: 'Tin Tức'
       guide: 'Hướg Dẫn Mua Hàng'
