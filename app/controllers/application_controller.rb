@@ -18,6 +18,13 @@ class ApplicationController < ActionController::Base
       Order.new
     end
   end
+
+  def is_admin?
+    if current_user.role.eql? 'admin'
+    else
+      redirect_to root_url
+     end
+  end
 #  I18n
   #mac dinh trinh duyet se chi dinh chay ngon ngu nao
   private

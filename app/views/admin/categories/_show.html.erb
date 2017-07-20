@@ -28,16 +28,21 @@
               </td>
               <td><p style="color: black"><%= pr.description %></p></td>
               <td>
-                  <%= link_to "X", admin_category_path(pr), method: :delete, remote: true, class: 'btn btn-sm btn-primary', id: 'destroy_pr'%>
+                  <%= link_to "X", admin_product_path(pr), method: :delete, remote: true, class: 'btn btn-sm btn-primary', id: 'destroy_pr'%>
                   <%= link_to "edit", edit_admin_product_path(pr), remote: true, class: 'btn btn-sm btn-primary'%>
                   <%= link_to "show", admin_product_path(pr.id), class: 'btn btn-sm btn-primary'%>
               </td>
           </tr>
         <% end %>
         <tr>
-            <td>PHAN TRANG</td>
           </tr>
         </tbody>
         </table>
+            <%= will_paginate @products %>
   </div>
 </div>
+<script>
+$(function(){
+   $('.pagination a').attr('data-remote', 'true')
+});
+</script>

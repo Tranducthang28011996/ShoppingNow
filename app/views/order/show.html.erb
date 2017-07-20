@@ -57,8 +57,9 @@
                     </td>
                     <td id="amount-<%= oi.product.id %>"><%= number_to_currency oi.product.price * oi.quantity %></td>
                     <td>
-                        <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Remove item">X
-                        </button>
+                        <%= link_to order_path(oi), method: :delete, remote: true, class: "destroy-product" do %>
+                            <span class="glyphicon glyphicon-trash" style="color: black"></span>
+                        <% end %>
                     </td>
                 </tr>
                 <% end %>

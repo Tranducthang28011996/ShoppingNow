@@ -1,6 +1,5 @@
 class Admin::CategoriesController < ApplicationController
-
-  before_action :skiplayout, :new
+  before_action :authenticate_user! ,:skiplayout, :new, :user_signed_in?, :is_admin?
   def index
    @categories = Category.all
   end
@@ -10,10 +9,10 @@ class Admin::CategoriesController < ApplicationController
   end
   def show
     category = Category.find_by_id params[:id]
-    @products = category.products
+    @products = category.products.paginate(page: params[:page], per_page: 1)
   end
   def create
-    if params[:name_ct].nil? == false
+    if category_params[:name_ct].blank? == true
       @category = Product.new(product_pamrams)
       if @category.save
        redirect_to admin_root_url
@@ -31,28 +30,15 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find_by_id params[:id]
+  
   end
 
   def update
-    @category = Category.find_by_id params[:id]
-    if params[:name_ct] == nil
-      @category = Product.update(product_pamrams)
-       redirect_to admin_root_url
-    else
-      @category = Category.update(category_params)
-       redirect_to admin_root_url
-    end
+    
   end
 
   def destroy
-    @product = Product.find_by_id params[:id]
-    @product.destroy
-    respond_to do |format|
-      format.html {}
-      format.json {}
-      format.js   { render :layout => false }
-    end
+
   end
 
   private
