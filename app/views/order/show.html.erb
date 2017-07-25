@@ -70,7 +70,9 @@
                         <h4><strong>Total</strong></h4></td>
                     <td>
                         <h4><strong> <%= number_to_currency subtotal %></strong></h4></td>
-                    <td colspan="3"><button type="button" class="btn btn-primary">PAYMENT</button>
+                    <td colspan="3">
+                    <!-- <button type="button" class="btn btn-primary">PAYMENT</button> -->
+                    <%= link_to "PAYMENT", payment_index_path, class: 'btn btn-primary' %>
                     <%= submit_tag "UPDATE CART", class: 'btn btn-danger btn-md pull-right' %>
                     </td>
                 </tr>

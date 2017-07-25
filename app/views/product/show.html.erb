@@ -49,8 +49,19 @@
           <p><%= @product.description %></p>
         </div>
         <div id="menu1" class="tab-pane fade">
-          <h3>Menu 1</h3>
-          <p>Some content in menu 1.</p>
+        <% Review.all.each do |rv| %>
+          <div class="col-xs-12">
+            <%= rv.content %>
+          </div>
+         <% end %>
+         <%= form_for :review, url: reviews_path, method: :post do |f| %>
+          <div class="col-xs-12">
+            <textarea name="comment" form="usrform" rows="5" cols="86">Enter text here...</textarea>
+          </div>
+          <div class="col-xs-12">
+            <%= f.button  :submit , name: "product_id",value: @product.id, id: 'ok' , class: 'btn btn-primary'%>
+          </div>
+          <% end %>
         </div>
       </div>
     </div>

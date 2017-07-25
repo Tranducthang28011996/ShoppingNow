@@ -9,8 +9,12 @@
   </head>
 
   <body>
+  <div class="col-md-12">
   <%= render 'share/header' unless @skip_layout %>
+  </div>
     <%= yield %>
+  <div class="col-md-12">
   <%= render 'share/footer' unless @skip_layout%> 
+  </div>
   </body>
 </html>

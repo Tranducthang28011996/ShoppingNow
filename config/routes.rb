@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  resources :reviews, only: [:index, :show, :new, :create]
+
   scope "(:locale)", locale: /en|vi/ do
+  resources :payment, only: [:index, :show]
   root 'home#index'
   resources :product, only: [:index, :show]
   resources :order, only: [:show, :destroy]
