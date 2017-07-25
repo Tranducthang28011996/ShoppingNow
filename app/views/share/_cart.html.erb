@@ -1,4 +1,4 @@
-<%current_order.order_items.each do |oi| %>
+<%current_order.order_items.includes(:product).each do |oi| %>
   <span><%= oi.quantity %>x</span>&nbsp;
   <a href=""><%= oi.product.name %></a>
   <span style="margin-left: 6%"><%= number_to_currency oi.product.price * oi.quantity %>
